@@ -1,0 +1,33 @@
+
+<div style="width:90%; margin: auto;">
+  <h1>
+    Library
+  </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Categories</h2>
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Search Applets
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <ul class="list-group">
+            <li *ngFor="let item of category" style="list-style: none; margin-left: 2vh;"><a class="dropdown-item" style="text-decoration: none; cursor: pointer;"
+                (click)="selected(item.name)">{{item.name}} <span class="badge">{{item.num}}</span></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Applets</h2>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of applet">{{item}}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
